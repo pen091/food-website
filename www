@@ -1,0 +1,228 @@
+Here's a simple complete food website using HTML, CSS, and JavaScript. It includes:
+
+A homepage with a menu
+
+A contact section
+
+Responsive design
+
+
+Folder Structure
+
+/food-website
+│── index.html
+│── styles.css
+│── script.js
+└── images/
+
+
+---
+
+1. index.html (Main File)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Food</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <h1>Delicious Food</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h2>Welcome to Delicious Food</h2>
+        <p>Experience the best taste from our kitchen.</p>
+        <a href="#menu" class="btn">View Menu</a>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="images/burger.jpg" alt="Burger">
+                <h3>Classic Burger</h3>
+                <p>$8.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/pizza.jpg" alt="Pizza">
+                <h3>Cheese Pizza</h3>
+                <p>$12.99</p>
+            </div>
+            <div class="menu-item">
+                <img src="images/pasta.jpg" alt="Pasta">
+                <h3>Italian Pasta</h3>
+                <p>$10.99</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@deliciousfood.com</p>
+        <p>Phone: +123 456 7890</p>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Delicious Food. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+---
+
+2. styles.css (Styling)
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #ff5733;
+    color: white;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#home {
+    background: url('images/food-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: #ff5733;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+}
+
+#contact {
+    padding: 20px;
+}
+
+input, textarea, button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+button {
+    background: #ff5733;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+
+---
+
+3. script.js (JavaScript for Form Validation)
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
+    
+    if (name === '' || email === '' || message === '') {
+        alert('Please fill in all fields.');
+    } else {
+        alert('Message sent successfully!');
+        this.reset();
+    }
+});
+
+
+---
+
+How to Use:
+
+1. Save the files in a folder (food-website).
+
+
+2. Place images (burger.jpg, pizza.jpg, pasta.jpg, etc.) inside the images/ folder.
+
+
+3. Open index.html in a browser.
+
+
+
+This is a responsive, simple, and functional food website. You can expand it by adding more styling, animations, or even a backend for orders. Let me know if you need improvements!
+
+
